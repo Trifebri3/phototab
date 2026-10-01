@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 import { useLocation, useNavigate, Navigate } from 'react-router-dom';
-import { ArrowLeft, Download, Plus, Sparkles, Type, LayoutTemplate, Palette, Sticker as StickerIcon } from 'lucide-react';
+import { ArrowLeft, Download, Sparkles, Type, LayoutTemplate, Palette, Sticker as StickerIcon } from 'lucide-react';
 import { motion } from 'framer-motion';
 import * as htmlToImage from 'html-to-image';
 
@@ -228,7 +228,7 @@ export default function Editor() {
                   className={`absolute pointer-events-auto cursor-move font-black border-4 px-3 py-1 shadow-retro-sm ${sticker.color} ${theme === 'dark' || theme === 'teal' ? 'border-white' : 'border-retro-dark'}`}
                   initial={{ x: 100, y: 100, scale: 0 }}
                   animate={{ scale: 1 }}
-                  whileDrag={{ scale: 1.1, zIndex: 50, shadow: '8px 8px 0px 0px rgba(28,26,23,1)' }}
+                  whileDrag={{ scale: 1.1, zIndex: 50, boxShadow: '8px 8px 0px 0px rgba(28,26,23,1)' }}
                 >
                   {sticker.content}
                 </motion.div>
